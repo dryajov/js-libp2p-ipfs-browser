@@ -1,6 +1,10 @@
 'use strict'
 
-const w = require('webrtcsupport')
+let w = { support: false }
+
+try {
+  w = require('webrtcsupport')
+} catch (e) {}
 
 require('./websockets-only')
 
